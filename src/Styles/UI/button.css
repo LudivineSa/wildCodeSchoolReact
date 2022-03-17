@@ -1,0 +1,19 @@
+
+
+button {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    border : none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .buttonValidate {
+    background-color: rgb(36, 121, 36)
+  }
+  
+  .buttonCancel {
+    background-color: indianred;
+  }
