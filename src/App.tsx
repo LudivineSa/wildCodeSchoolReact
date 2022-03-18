@@ -1,4 +1,4 @@
-import './App.css';
+import './Styles/App.css';
 import {Suspense} from "react";
 import {Routes, Route} from "react-router-dom"
 import Home from "./components/Home/Home"
@@ -9,16 +9,18 @@ import UpdateWilder from "./components/Wilder/UpdateWilder"
 import SearchedWilder from "./components/Wilder/SearchedWilder"
 import Erreur404 from "./components/Erreur404"
 import { ToastContainer, toast } from 'react-toastify';
-
+import ThemeContextProvider from './functions/context'
 
 import {RecoilRoot} from 'recoil';
 
 function App() {
 
+
   return (
     <div className="App bg-slate-100	h-screen">
           <RecoilRoot>
-            <Header />
+            <ThemeContextProvider>
+            <Header /> 
               <div className="container">
               <Suspense fallback={<h1>Chargement...</h1>}>
                 <Routes>
@@ -31,6 +33,7 @@ function App() {
                 </Routes>
               </Suspense>
               </div>
+              </ThemeContextProvider>
           </RecoilRoot>
           <ToastContainer
                 position="bottom-right"

@@ -5,19 +5,9 @@ import { useRecoilState } from 'recoil'
 import {update} from "../../functions/atoms.js"
 import { BsFillPencilFill, BsFillTrashFill } from 'react-icons/bs';
 import ModalDelete from "../../UI/modal/ModalDelete"
+import {Wilder} from "../../functions/interface"
 
-
-type Testprops = {
-    name: string;
-    city: string;
-    id: string;
-    skills: Array<{
-        title: string,
-        votes: number
-    }>; 
-}
-
-function SingleWilder(props:Testprops) {
+function SingleWilder(props:Wilder) {
 
     const {name, city, id, skills} = props
 

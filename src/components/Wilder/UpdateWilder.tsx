@@ -34,8 +34,7 @@ function UpdateWilder() {
 
     const changeNameOrCity = (e, property) => {
         let copy = {...wilder}
-        if(property === "name") copy[0].name = e.target.value
-        if(property === "city") copy[0].city = e.target.value
+        copy[0][property] = e.target.value
         setWilder(copy);
     }
 

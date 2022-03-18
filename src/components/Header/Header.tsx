@@ -6,12 +6,11 @@ function Header() {
     
     const navigate = useNavigate();
     const inputSearch = useRef<HTMLInputElement>()
-    const select = useRef<any>()
+    const select = useRef<HTMLSelectElement>()
     
     const redirectedResearch = (e) => {
         e.preventDefault();
         navigate("/searchedwilder/" + inputSearch.current.value + "/" + select.current.value)
-        window.location.reload();
     }
     return(
         <div className="header">

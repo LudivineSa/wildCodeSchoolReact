@@ -22,7 +22,7 @@ function SearchedWilder() {
             let result = list.filter((wilder) => wilder.name.includes(params.field))
             setResults(result)
         }
-    }, [])
+    }, [params])
 
 
     return(
